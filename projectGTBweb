@@ -1,0 +1,554 @@
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+
+export default function Home() {
+  return (
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="flex flex-col lg:flex-row justify-between items-center bg-gradient-to-br from-[#2d3e85] to-[#3f51a8] shadow-lg">
+        <div className="bg-white px-8 py-5 flex items-center">
+          <Image 
+            src="/logo.png" 
+            alt="Grand Teknik Bina Logo" 
+            width={96}
+            height={96}
+            className="object-contain"
+          />
+        </div>
+        <nav className="flex gap-0 mr-0 lg:mr-12 flex-wrap justify-center w-full lg:w-auto">
+          <Link href="#about" className="text-white px-6 lg:px-8 py-4 font-medium uppercase text-sm tracking-wider hover:bg-white/10 transition-all relative group">
+            About Us
+            <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-3/5 -translate-x-1/2"></span>
+          </Link>
+          <Link href="#services" className="text-white px-6 lg:px-8 py-4 font-medium uppercase text-sm tracking-wider hover:bg-white/10 transition-all relative group">
+            Services
+            <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-3/5 -translate-x-1/2"></span>
+          </Link>
+          <Link href="#project" className="text-white px-6 lg:px-8 py-4 font-medium uppercase text-sm tracking-wider hover:bg-white/10 transition-all relative group">
+            Project
+            <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-3/5 -translate-x-1/2"></span>
+          </Link>
+          <Link href="#clients" className="text-white px-6 lg:px-8 py-4 font-medium uppercase text-sm tracking-wider hover:bg-white/10 transition-all relative group">
+            Clients
+            <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-3/5 -translate-x-1/2"></span>
+          </Link>
+          <Link href="#contact" className="text-white px-6 lg:px-8 py-4 font-medium uppercase text-sm tracking-wider hover:bg-white/10 transition-all relative group">
+            Contact Us
+            <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-3/5 -translate-x-1/2"></span>
+          </Link>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-[500px] lg:h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/herobackground.jpg" 
+            alt="Background" 
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
+        {/* Dim Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        {/* Optional gradient overlay for additional styling */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#334a7a]/50 to-[#4a5f9a]/50"></div>
+        
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute w-64 h-64 bg-[#4a5f9a] rounded-full opacity-30 top-20 left-10 blur-3xl"></div>
+            <div className="absolute w-96 h-96 bg-[#4a5f9a] rounded-full opacity-30 bottom-20 right-10 blur-3xl"></div>
+          </div>
+        </div>
+        
+        <div className="relative z-10 max-w-4xl px-5 animate-fadeInUp">
+          <div className="w-48 h-48 lg:w-60 lg:h-60 mx-auto mb-8 flex items-center justify-center">
+            <div className="bg-white p-6 rounded-2xl shadow-2xl">
+              <Image 
+                src="/logo.png" 
+                alt="Grand Teknik Bina Logo" 
+                width={240}
+                height={240}
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <h1 className="text-3xl lg:text-5xl font-bold mb-5 drop-shadow-lg tracking-wider">
+            WELCOME TO GRAND TEKNIK BINA SDN BHD
+          </h1>
+          <p className="text-base lg:text-lg uppercase tracking-widest font-light drop-shadow-md">
+            &quot;Forward the excellence and efficient operation of every level of construction&quot;
+          </p>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-5 max-w-7xl mx-auto">
+        <h2 className="text-4xl text-[#2d3e85] mb-12 text-center relative pb-4">
+          About Us
+          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#e74c3c]"></span>
+        </h2>
+        
+        <div className="mb-12">
+          <div className="border-4 border-[#2d3e85] inline-block px-8 py-3 mb-8">
+            <h3 className="text-2xl font-bold text-black uppercase">Company Profile</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
+              <Image 
+                src="/PictureGTB.jpg" 
+                alt="Grand Teknik Bina Building" 
+                width={400}
+                height={300}
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
+            </div>
+            
+            <div className="border-4 border-[#6B46C1] p-6 bg-purple-50">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>GRAND TEKNIK BINA SDN BHD (&quot;GTSB&quot;)</strong> is a growing fully owned Bumiputera Malaysia company established since 2001 with a primary business as a Contractor and Project Delivery Partner (PDP) to the Information and Communications Technology (ICT) and Telecommunication Industry in Malaysia.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                The company&apos;s business approach is encapsulated in its positioning statement of &quot;Looking Forward & Forward Looking&quot;. The words &quot;Looking Forward&quot; articulate the company&apos;s ability in securing high impact economy projects that are financially viable and the words &quot;Forward Looking&quot; reflects the company&apos;s progressive efforts in meeting challenges with innovative solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              Grand Teknik Bina Sdn Bhd is a leading construction and industrial services company committed to delivering excellence in every project we undertake.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              With years of experience in the industry, we specialize in providing comprehensive solutions for construction projects of all scales, ensuring efficient operations and superior quality results.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Our team of dedicated professionals works tirelessly to exceed client expectations through innovative approaches and meticulous attention to detail.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              We pride ourselves on our commitment to safety, quality, and timely project completion. Our expertise spans across various sectors including industrial construction, infrastructure development, and specialized engineering services.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              At Grand Teknik Bina, we believe in building lasting relationships with our clients by consistently delivering projects that meet the highest standards of excellence.
+            </p>
+          </div>
+        </div>
+
+        {/* Director Profile Section */}
+        <div className="mt-16">
+          <div className="border-4 border-[#2d3e85] inline-block px-8 py-3 mb-8">
+            <h3 className="text-2xl font-bold text-black uppercase">Director Profile</h3>
+          </div>
+
+          <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
+            <div className="space-y-4">
+              <Image 
+                src="/Picture4.png" 
+                alt="Managing Director" 
+                width={300}
+                height={400}
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-2xl font-bold text-black uppercase">Managing Director</h4>
+              <h5 className="text-xl font-semibold text-gray-800">
+                DATO&apos; IR. TS. HAJI ABDUL MANAF HANAFI (DIMP)
+              </h5>
+              <p className="text-gray-700 leading-relaxed">
+                With over 30 years of experience in the construction industry, Dato&apos; Ir. Ts. Haji Abdul Manaf Hanafi is the founder of the company. A certified Professional Engineer, he holds a Bachelor&apos;s in Electrical Engineering from ITM and a Master&apos;s in Management from UnikL, where he is currently pursuing his Doctorate. He began his career at Sapura Holdings Sdn Bhd, working on the Petronas Twin Towers&apos; structured cabling project. His leadership has been instrumental in growing the company into a premier telecommunications service provider, expanding its reach into several other related industries.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Vision, Mission, Values Section */}
+        <div className="mt-16">
+          <div className="flex justify-center items-center py-12">
+            <div className="relative w-full max-w-5xl">
+              
+              {/* Top row - ENERGY and EXCELLENCE */}
+              <div className="flex justify-center items-center gap-15 mb-[-55px]">
+                {/* ENERGY */}
+                <div className="relative w-36 h-28 flex items-center justify-center">
+                  <svg viewBox="0 0 200 173.2" className="absolute w-full h-full">
+                    <polygon points="150,0 200,86.6 150,173.2 50,173.2 0,86.6 50,0" fill="white" stroke="#2d3e85" strokeWidth="4"/>
+                  </svg>
+                  <span className="relative z-10 text-base font-bold text-black">ENERGY</span>
+                </div>
+
+                {/* EXCELLENCE */}
+                <div className="relative w-36 h-28 flex items-center justify-center">
+                  <svg viewBox="0 0 200 173.2" className="absolute w-full h-full">
+                    <polygon points="150,0 200,86.6 150,173.2 50,173.2 0,86.6 50,0" fill="white" stroke="#2d3e85" strokeWidth="4"/>
+                  </svg>
+                  <span className="relative z-10 text-base font-bold text-black">EXCELLENCE</span>
+                </div>
+              </div>
+
+              {/* Middle row - VALUES (center) */}
+              <div className="flex justify-center mb-0.5">
+                <div className="relative w-36 h-28 flex items-center justify-center">
+                  <svg viewBox="0 0 200 173.2" className="absolute w-full h-full">
+                    <polygon points="150,0 200,86.6 150,173.2 50,173.2 0,86.6 50,0" fill="white" stroke="#2d3e85" strokeWidth="4"/>
+                  </svg>
+                  <span className="relative z-10 text-base font-bold text-black">VALUES</span>
+                </div>
+              </div>
+
+              {/* Bottom row - EXCITEMENT (center) */}
+              <div className="flex justify-center mb-0">
+                <div className="relative w-36 h-28 flex items-center justify-center">
+                  <svg viewBox="0 0 200 173.2" className="absolute w-full h-full">
+                    <polygon points="150,0 200,86.6 150,173.2 50,173.2 0,86.6 50,0" fill="white" stroke="#2d3e85" strokeWidth="4"/>
+                  </svg>
+                  <span className="relative z-10 text-base font-bold text-black">EXCITEMENT</span>
+                </div>
+              </div>
+
+              {/* Vision and Mission below */}
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+                {/* VISION */}
+                <div className="border-4 border-[#2d3e85] p-6 bg-white">
+                  <div className="text-xl font-bold text-black mb-3">VISION</div>
+                  <p className="text-sm leading-relaxed text-black">
+                    To continuously create new opportunities for growth in our strategic businesses.
+                  </p>
+                </div>
+
+                {/* MISSION */}
+                <div className="border-4 border-[#2d3e85] p-6 bg-white">
+                  <div className="text-xl font-bold text-black mb-3">MISSION</div>
+                  <p className="text-sm leading-relaxed text-black">
+                    To continuously create new opportunities for growth in our strategic businesses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-5 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl text-[#2d3e85] mb-12 text-center relative pb-4">
+            Our Services
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#e74c3c]"></span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+            {[
+              { icon: '⚙️', title: 'Mechanical & Electrical', desc: 'Comprehensive mechanical and electrical engineering solutions for all types of construction projects.', link: '/services/mechanical-electrical' },
+              { icon: '📡', title: 'ICT/Network', desc: 'Advanced ICT infrastructure and network solutions for modern telecommunication requirements.', link: '/services/ict-network' },
+              { icon: '🎨', title: 'Interior Design', desc: 'Creative and functional interior design services to transform spaces into inspiring environments.', link: '/services/interior-design' },
+              { icon: '🏗️', title: 'Civil Division', desc: 'Complete civil engineering and construction services for infrastructure and building development.', link: '/services/civil-division' }
+            ].map((service, index) => (
+              <Link 
+                key={index} 
+                href={service.link}
+                className="bg-white p-10 rounded-xl text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all border-t-4 border-[#2d3e85] cursor-pointer group"
+              >
+                <div className="text-5xl mb-5 text-[#3f51a8] group-hover:scale-110 transition-transform">{service.icon}</div>
+                <h3 className="text-[#2d3e85] mb-4 text-xl font-semibold group-hover:text-[#e74c3c] transition-colors">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">{service.desc}</p>
+                <span className="text-[#2d3e85] font-semibold group-hover:text-[#e74c3c] transition-colors inline-flex items-center gap-2">
+                  Learn More →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="project" className="py-20 px-5 max-w-7xl mx-auto">
+        <h2 className="text-4xl text-[#2d3e85] mb-12 text-center relative pb-4">
+          Our Projects
+          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#e74c3c]"></span>
+        </h2>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              We have successfully completed numerous projects across various sectors, demonstrating our versatility and commitment to excellence.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              From large-scale industrial facilities to complex infrastructure developments, our portfolio showcases our capability to handle diverse and challenging projects.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p className="text-gray-600 leading-relaxed">
+              Each project is approached with the same dedication to quality, safety, and client satisfaction that has become synonymous with the Grand Teknik Bina name.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Contact us to learn more about our completed projects and how we can bring your vision to life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Major Clients Section */}
+      <section id="clients" className="py-20 px-5 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <div className="flex justify-center mb-12">
+            <div className="border-4 border-[#2d3e85] px-12 py-4 bg-white">
+              <h2 className="text-3xl font-bold text-[#2d3e85] uppercase">Major Client</h2>
+            </div>
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto mb-12">
+            <input
+              type="text"
+              id="clientSearch"
+              placeholder="Search clients..."
+              className="w-full px-6 py-3 border-2 border-[#2d3e85] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3f51a8] text-gray-700"
+              onInput={(e) => {
+                const searchTerm = e.currentTarget.value.toLowerCase();
+                const clientItems = document.querySelectorAll('.client-item');
+                
+                clientItems.forEach((item) => {
+                  const clientName = item.getAttribute('data-client-name')?.toLowerCase() || '';
+                  if (clientName.includes(searchTerm)) {
+                    item.classList.remove('hidden');
+                  } else {
+                    item.classList.add('hidden');
+                  }
+                });
+              }}
+            />
+          </div>
+
+          {/* Clients Grid - 3 columns */}
+          <div className="grid grid-cols-3 gap-8 items-center">
+            {/* Row 1 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/petronas.png" alt="Petronas" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/suria-klcc.png" alt="Suria KLCC" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/jx-nippon.png" alt="JX Nippon Oil & Gas Exploration" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/sapuracrest.png" alt="SapuraCrest Petroleum" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/klec.png" alt="KLEC" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/talisman.png" alt="Talisman Energy" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 3 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/total.png" alt="Total" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/tabung-haji.png" alt="Tabung Haji" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/petronas-carigali.png" alt="Petronas Carigali" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 4 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/petrofac.png" alt="Petrofac" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/amanahraya.png" alt="AmanaRaya" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/carigali-hess.png" alt="Carigali Hess" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 5 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/celcom.png" alt="Celcom" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/avanade.png" alt="Avanade" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/mubadala.png" alt="Mubadala" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 6 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/uema.png" alt="UEMA" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/bank-muamalat.png" alt="Bank Muamalat" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/aljazeera.png" alt="Al Jazeera" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 7 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/tenaga-nasional.png" alt="Tenaga Nasional" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/ecerdc.png" alt="East Coast Economic Region" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/kualanamu.png" alt="Kualanamu" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 8 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/malaysia-airports.png" alt="Malaysia Airports" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/syabas.png" alt="Syabas" width={150} height={80} className="object-contain" />
+            </div>
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/tm.png" alt="TM" width={150} height={80} className="object-contain" />
+            </div>
+
+            {/* Row 9 */}
+            <div className="flex justify-center items-center p-6 hover:scale-105 transition-transform">
+              <Image src="/clients/digi.png" alt="DiGi" width={150} height={80} className="object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-5 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl text-[#2d3e85] mb-12 text-center relative pb-4">
+            Contact Us
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#e74c3c]"></span>
+          </h2>
+          
+          {/* Our HQ Section */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-8 rounded-lg shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mr-4">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Logo" 
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-3xl font-bold">OUR HQ</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div>
+                  <p className="text-purple-300 font-semibold mb-1">Grand Teknik Sdn.Bhd:</p>
+                  <p>No 29, Jalan Suarasa 8/3,</p>
+                  <p>Bandar Tun Hussein Onn,</p>
+                  <p>43200 Cheras, Selangor D.E</p>
+                </div>
+                
+                <div>
+                  <p className="text-purple-300 font-semibold mb-1">Call Us:</p>
+                  <p>03-9076 9624</p>
+                  <p>03-9076 2624</p>
+                </div>
+                
+                <div>
+                  <p className="text-purple-300 font-semibold mb-1">Fax:</p>
+                  <p>03-9076 9614</p>
+                </div>
+                
+                <div>
+                  <p className="text-purple-300 font-semibold mb-1">E-mail:</p>
+                  <p>admin@grandteknik.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Branch Section */}
+          <div>
+            <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white p-8 rounded-lg shadow-xl">
+              <h3 className="text-3xl font-bold mb-6">Our Branch</h3>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* East Coast Branch */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-purple-300">EAST COAST BRANCH</h4>
+                  <div>
+                    <p className="text-purple-300 font-semibold mb-1">Grand Teknik Sdn.Bhd:</p>
+                    <p>Lot 210,</p>
+                    <p>Tkt 1 Pusat Niaga Paka,</p>
+                    <p>23100 Paka, Terengganu Darul Iman</p>
+                  </div>
+                  <div>
+                    <p className="text-purple-300 font-semibold">Call Us:</p>
+                    <p>09-827 9210</p>
+                  </div>
+                  <div>
+                    <p className="text-purple-300 font-semibold">Fax:</p>
+                    <p>09-827 9211</p>
+                  </div>
+                </div>
+
+                {/* Northern Branch */}
+                <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-purple-300">NORTHERN BRANCH</h4>
+                  <div>
+                    <p className="text-purple-300 font-semibold mb-1">Grand Teknik Sdn.Bhd:</p>
+                    <p>No. 4B - Lorong Bertam Indah,</p>
+                    <p>13200 Kepala Batas,</p>
+                    <p>Seberang Prai Utara.</p>
+                  </div>
+                  <div>
+                    <p className="text-purple-300 font-semibold">Call Us:</p>
+                    <p>04-5794409</p>
+                  </div>
+                  <div>
+                    <p className="text-purple-300 font-semibold">Fax:</p>
+                    <p>04-5794354</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-[#2d3e85] to-[#3f51a8] text-white text-center py-8 px-5">
+        <p className="mb-2">&copy; 2024 Grand Teknik Bina Sdn Bhd. All rights reserved.</p>
+        <p className="text-sm opacity-90">Grand Teknik Bina Sdn.Bhd. ALL RIGHT REVERSED</p>
+      </footer>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 1s ease;
+        }
+      `}</style>
+    </div>
+  );
+}
